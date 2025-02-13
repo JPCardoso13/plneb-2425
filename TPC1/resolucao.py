@@ -10,7 +10,6 @@ def reverse_string(s):
 def count_as(s):
     """Conta o número de caracteres 'a' e 'A'"""
     char_map = {'a': 0, 'A': 0}
-
     for char in s:
         if char in char_map.keys():
             char_map[char] += 1
@@ -25,7 +24,6 @@ def count_vowels(s):
     """Conta o número de vogais numa string."""
     vowels = 'aeiouAEIOU'
     count = 0
-
     for char in s:
         if char in vowels:
             count += 1
@@ -86,7 +84,7 @@ def is_anagram(s1, s2):
             char_map[char] += 1
 
     for char in s2:
-        if char not in char_map.keys() or char_map[char] == 0:
+        if char not in char_map.keys() or char_map[char] <= 0:  # O < é redundante na implementação atual.
             return False
         char_map[char] -= 1
 
@@ -121,7 +119,7 @@ def group_anagrams(string_list):
 
 if __name__ == '__main__':
     # Função para automatizar testes de funções e imprimir resultados de forma formatada
-    def test(num_exercise, func, *args, **kwargs):
+    def test(num_exercise, func, *args):
         """
         Função para automatizar testes das funções criadas
         e imprimir os resultados obtidos de forma formatada.
@@ -144,19 +142,18 @@ if __name__ == '__main__':
     # Execução de testes
     test(1, reverse_string, "bom dia")
     test(2, count_as, "boA tArde")
-    test(3, count_vowels, "bOa noItee")
+    test(3, count_vowels, "bOa noIte")
     test(4, to_lowercase, "bOM diA")
     test(5, to_uppercase, "Boa tardE")
-    test(6, is_palindrome, "racecar")
+    test(6, is_palindrome, "radar")
     test(6, is_palindrome, "boa noite")
     test(7, are_balanced, "dois", "esternocleidomastoideu")
     test(7, are_balanced, "esternocleidomastoideu", "bom dia")
     test(8, check_occurrences, "abc", "abcerd0lkwabcgacbabc")
     test(8, check_occurrences, "abc", "")
-    test(8, check_occurrences, "", "abcerd0lkwabcgacbabc")
+    test(8, check_occurrences, "xyz", "abcerd0lkwabcgacbabc")
     test(9, is_anagram, "listen", "silent")
     test(9, is_anagram, "hello", "world")
-    test(9, is_anagram, "babab", "aabbb")
     test(9, is_anagram, "roma", "")
     test(9, is_anagram, "", "")
-    test(10, group_anagrams, ["aaabbb", "bababa", "hehe", "ii", "eheh", "hhee", "abbbaa"])
+    test(10, group_anagrams, ["roma", "amor", "sacas", "casas", "tigre", "trige", "iceman", "cinema", "sozinho"])
