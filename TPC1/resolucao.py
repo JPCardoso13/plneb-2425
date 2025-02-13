@@ -84,7 +84,7 @@ def is_anagram(s1, s2):
             char_map[char] += 1
 
     for char in s2:
-        if char not in char_map.keys() or char_map[char] <= 0:  # O < é redundante na implementação atual.
+        if char not in char_map.keys() or char_map[char] <= 0:
             return False
         char_map[char] -= 1
 
@@ -118,7 +118,6 @@ def group_anagrams(string_list):
 
 
 if __name__ == '__main__':
-    # Função para automatizar testes de funções e imprimir resultados de forma formatada
     def test(num_exercise, func, *args):
         """
         Função para automatizar testes das funções criadas
