@@ -29,7 +29,7 @@ A estrutura base da página divide-se em duas partes principais:
     <h2>NOME</h2>
     <div class="conteudo-golo">
         <iframe src="url-do-golo"></iframe>
-        <ul>
+        <ul class="detalhes">
             <li><strong>Data:</strong> DATA</li>
             <li><strong>Adversário:</strong> ADV</li>
             <li><strong>Minuto:</strong> MIN</li>
