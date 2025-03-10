@@ -1,0 +1,158 @@
+/* Reset básico */
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    background: url('assets/relva.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(30, 30, 30, 0.95);
+    color: #fff;
+    padding: 25px 50px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+/* Imagens no cabeçalho */
+header img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Conteúdo central do cabeçalho */
+.conteudo-header {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título */
+.conteudo-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #f9c74f;
+}
+
+/* Estilizar "Cristiano Ronaldo" */
+#play-audio-siu {
+    color: #f9c74f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#play-audio-siu:hover {
+    color: #ffeb3b;
+    text-shadow: 0px 0px 8px rgba(255, 235, 59, 0.8);
+}
+
+/* Contador "SIU" */
+.contador-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contador-reset p {
+    margin: 10px 10px 0 0;
+    font-size: 17px;
+    display: inline;
+}
+
+#siu-counter {
+    color: #f9c74f;
+}
+
+/* Botão de reset */
+#siu-reset-btn {
+    background: #f94144;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+#siu-reset-btn:hover {
+    background: #d62828;
+}
+
+/* Estrutura principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(26, 26, 26, 0.95);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+/* Cada golo */
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+/* Título dos golos */
+h2 {
+    color: #f9c74f;
+}
+
+/* Vídeo e detalhes de um golo */
+.conteudo-golo {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+
+/* Detalhes de um golo */
+.detalhes {
+    list-style: none;
+    background: #252525;
+    padding: 15px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 20px;
+    align-items: center;
+}
+
+.detalhes li {
+    display: contents;
+}
+
+.detalhes li strong {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Descrição de um golo */
+.descricao {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.descricao strong {
+    color: #f9c74f;
+    font-size: 18px;
+}
