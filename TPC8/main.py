@@ -67,7 +67,7 @@ def format_contents_as_dict(html_content):
             content_map[current_key].append([li.text.strip().replace(" ", " ") for li in element.find_all("li")])
 
         elif element.name == "h3":
-            artigos_relacionados |= {element.text.strip().replace(" ", " "): element.a["href"]}
+            artigos_relacionados[element.text.strip().replace(" ", " ")] = element.a["href"]
             content_map[current_key] = artigos_relacionados
 
     return content_map | get_last_elems(html_content)
