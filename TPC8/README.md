@@ -10,14 +10,22 @@ permitem uma formatação mais clara e estruturada dos dados extraídos.
 
 A lógica do programa foi dividida em várias partes modulares para facilitar a organização, o controlo do processo de
 extração e a construção do output. De forma geral, o processo envolve as seguintes funções:
-- ``get_html_content(url)``: Extrai o conteúdo HTML de uma página a partir do URL fornecido, devolvendo-o como uma
+- `get_html_content(url)`: Extrai o conteúdo HTML de uma página a partir do URL fornecido, devolvendo-o como uma
 string.
-- ``get_info_doencas(letra)``: Devolve um dicionário com a informação relativa a todas as doenças cuja inicial
+
+
+- `get_info_doencas(letra)`: Devolve um dicionário com a informação relativa a todas as doenças cuja inicial
 corresponde à letra fornecida.
-- ``get_conteudo_doenca(url_doenca)``: Obtém e estrutura os conteúdos de uma doença específica, a partir do seu URL.
-- ``format_contents_as_dict(html_content)``: Converte o conteúdo HTML de uma página de doença num dicionário, com base
+
+
+- `get_conteudo_doenca(url_doenca)`: Obtém e estrutura os conteúdos de uma doença específica, a partir do seu URL.
+
+
+- `format_contents_as_dict(html_content)`: Converte o conteúdo HTML de uma página de doença num dicionário, com base
 nos títulos e conteúdos das tags HTML. É usada pela função anterior.
-- ``get_last_elems(html_content)``: Função auxiliar que extrai conteúdos fora da estrutura principal da página, como
+
+
+- `get_last_elems(html_content)`: Função auxiliar que extrai conteúdos fora da estrutura principal da página, como
 elementos finais não aninhados.
 
 ### Output
@@ -26,7 +34,7 @@ texto compostas por elementos como `<p>` ou `<ul>` são representadas como lista
 relacionados, são organizadas em subdicionários.
 
 Exemplo de estrutura do JSON:
-````json
+```json
 {
     "Exemplo de Doença": {
         "URL": "/url-da-doenca",
@@ -63,5 +71,5 @@ Exemplo de estrutura do JSON:
         ...
     }
 }
-````
+```
 **Nota**: Nem todas as doenças possuem todos os campos exemplificados acima.
