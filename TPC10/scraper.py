@@ -23,7 +23,7 @@ def fetch_article_data(url):
     soup = BeautifulSoup(html_content, "html.parser")
     article_data = {"URL": url}
 
-    # Title
+    # Título
     article_data["titulo"] = soup.find("h1", class_="page_title").text.strip().replace("  ", " ")
 
     # Título traduzido
@@ -31,11 +31,11 @@ def fetch_article_data(url):
     if subtitle:
         article_data["titulo_pt"] = subtitle.text.strip().replace("  ", " ")
 
-    # Publishing Date
+    # Data de publicação
     article_data["data_publicacao"] = (soup.find("div", class_="item published").
                                        find("div", class_="value").text.strip().replace("  ", " "))
 
-    # Authors
+    # Autores
     author_list = soup.find("ul", class_="authors")
     author_values = []
     for li in author_list.find_all("li"):
